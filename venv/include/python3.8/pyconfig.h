@@ -316,7 +316,7 @@
 #define HAVE_EXPM1 1
 
 /* Define to 1 if you have the `faccessat' function. */
-#define HAVE_FACCESSAT 1
+/* #undef HAVE_FACCESSAT */
 
 /* Define if you have the 'fchdir' function. */
 #define HAVE_FCHDIR 1
@@ -325,13 +325,13 @@
 #define HAVE_FCHMOD 1
 
 /* Define to 1 if you have the `fchmodat' function. */
-#define HAVE_FCHMODAT 1
+/* #undef HAVE_FCHMODAT */
 
 /* Define to 1 if you have the `fchown' function. */
 #define HAVE_FCHOWN 1
 
 /* Define to 1 if you have the `fchownat' function. */
-#define HAVE_FCHOWNAT 1
+/* #undef HAVE_FCHOWNAT */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -340,7 +340,7 @@
 /* #undef HAVE_FDATASYNC */
 
 /* Define to 1 if you have the `fdopendir' function. */
-#define HAVE_FDOPENDIR 1
+/* #undef HAVE_FDOPENDIR */
 
 /* Define to 1 if you have the `fdwalk' function. */
 /* #undef HAVE_FDWALK */
@@ -370,7 +370,7 @@
 #define HAVE_FSEEKO 1
 
 /* Define to 1 if you have the `fstatat' function. */
-#define HAVE_FSTATAT 1
+/* #undef HAVE_FSTATAT */
 
 /* Define to 1 if you have the `fstatvfs' function. */
 #define HAVE_FSTATVFS 1
@@ -618,7 +618,7 @@
 #define HAVE_LINK 1
 
 /* Define to 1 if you have the `linkat' function. */
-#define HAVE_LINKAT 1
+/* #undef HAVE_LINKAT */
 
 /* Define to 1 if you have the <linux/can/bcm.h> header file. */
 /* #undef HAVE_LINUX_CAN_BCM_H */
@@ -687,7 +687,7 @@
 /* #undef HAVE_MEMRCHR */
 
 /* Define to 1 if you have the `mkdirat' function. */
-#define HAVE_MKDIRAT 1
+/* #undef HAVE_MKDIRAT */
 
 /* Define to 1 if you have the `mkfifo' function. */
 #define HAVE_MKFIFO 1
@@ -726,7 +726,7 @@
 #define HAVE_NICE 1
 
 /* Define to 1 if you have the `openat' function. */
-#define HAVE_OPENAT 1
+/* #undef HAVE_OPENAT */
 
 /* Define to 1 if you have the `openpty' function. */
 #define HAVE_OPENPTY 1
@@ -772,6 +772,9 @@
 
 /* Define if you have the 'prlimit' functions. */
 /* #undef HAVE_PRLIMIT */
+
+/* Define if you have the '_dyld_shared_cache_contains_path' function. */
+/* #undef HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH */
 
 /* Define to 1 if you have the <process.h> header file. */
 /* #undef HAVE_PROCESS_H */
@@ -819,7 +822,7 @@
 #define HAVE_READLINK 1
 
 /* Define to 1 if you have the `readlinkat' function. */
-#define HAVE_READLINKAT 1
+/* #undef HAVE_READLINKAT */
 
 /* Define to 1 if you have the `readv' function. */
 #define HAVE_READV 1
@@ -828,7 +831,7 @@
 #define HAVE_REALPATH 1
 
 /* Define to 1 if you have the `renameat' function. */
-#define HAVE_RENAMEAT 1
+/* #undef HAVE_RENAMEAT */
 
 /* Define if readline supports append_history */
 #define HAVE_RL_APPEND_HISTORY 1
@@ -1026,7 +1029,7 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
 
-/* Has stdatomic.h with atomic_int */
+/* Has stdatomic.h with atomic_int and atomic_uintptr_t */
 #define HAVE_STD_ATOMIC 1
 
 /* Define to 1 if you have the `strdup' function. */
@@ -1081,7 +1084,7 @@
 #define HAVE_SYMLINK 1
 
 /* Define to 1 if you have the `symlinkat' function. */
-#define HAVE_SYMLINKAT 1
+/* #undef HAVE_SYMLINKAT */
 
 /* Define to 1 if you have the `sync' function. */
 #define HAVE_SYNC 1
@@ -1262,7 +1265,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Define to 1 if you have the `unlinkat' function. */
-#define HAVE_UNLINKAT 1
+/* #undef HAVE_UNLINKAT */
 
 /* Define to 1 if you have the `unsetenv' function. */
 #define HAVE_UNSETENV 1
@@ -1518,6 +1521,10 @@
 
 /* Define if WINDOW in curses.h offers a field _flags. */
 #define WINDOW_HAS_FLAGS 1
+
+/* Define if you want build the _decimal module using a coroutine-local rather
+   than a thread-local context */
+#define WITH_DECIMAL_CONTEXTVAR 1
 
 /* Define if you want documentation strings in extension modules */
 #define WITH_DOC_STRINGS 1
